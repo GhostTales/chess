@@ -3,45 +3,19 @@
 using System.Collections.Generic;
 using System.Dynamic;
 
-private class Brik
+public class Brik : Board
 {
 
-    public string Brickname;
-    public int move;
-    public string color;
-    private List<(int, int)> moveset;
-    public List<(int, int)> moves;
+    protected string? BrikName { get; }
+    public bool Color { get; }
+    private List<(int, int)>? MoveSet { get; }
+    public List<(int, int)>? Moves { get; }
 
-
-
-
-    public string Getbrickname()
+    private Brik(string Name, bool Color)
     {
-
-        return Brickname;
-
-
+        this.BrikName = Name;
+        this.Color = Color;
     }
-  
-    public int Getmove()
-    {
-
-        return move;
-
-    }
-
-    public string Getcolor()
-    {
-        return color;
-    }
-
-
-    public (int, int) Getmoves()
-    {
-
-        return moves;
-    }
-
 
 }
 
